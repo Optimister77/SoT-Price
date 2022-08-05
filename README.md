@@ -6,3 +6,6 @@ Ru-ru
 En-en
 
 Hello! The "program" is made for the game Sea of Thieves. It is a large database of all the treasures in the game and shows the arithmetic average of the bidding price among the participants. The program is very simple, the author is krivorukiy.
+
+Communication with the author discord Damernm#3223
+Связь с автором дискорд Damernm#3223
