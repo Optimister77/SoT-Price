@@ -1,317 +1,274 @@
-﻿//Автор damernm
-//Связь дискорд Damernm#3223
-using System;
-using System.Diagnostics;
-Console.WriteLine("Приветствую! Это прогрмма сделана для просмотра средних цен в игре SoT.");
-Console.WriteLine("Greetings! This program is designed to view average prices in the SoT game.");
-Console.WriteLine("Введите язык программы/Enter the program language(En/Ru)");
-string? language = Console.ReadLine();
+﻿Console.WriteLine("Приветствую! Это прогрмма сделана для просмотра средних цен в игре SoT.");
 while (true)
 {
-    string[] Name = new string[100];
-    int[] Cen = new int[100];
-    Name[0] = "Гнилой трофейный череп";
-    Name[1] = "Опальный трофейный череп";
-    Name[2] = "Злобный трофейный череп";
-    Name[3] = "Гнусный трофейный череп";
-    Name[4] = "Горелый гнилой трофейный череп";
-    Name[5] = "Горелый опальный трофейный череп";
-    Name[6] = "Горелый злобный трофейный череп";
-    Name[7] = "Горелый гнусный трофейный череп";
-    Name[8] = "Кораловый гнилой трофейный череп";
-    Name[9] = "Коралловый опальный трофейный череп";
-    Name[10] = "Кораловый злобный трофейный череп";
-    Name[11] = "Кораловый гнусный трофейный череп";
-    Name[12] = "Череп проклятых";
-    Name[13] = "Старший череп проклятых";
-    Name[14] = "Череп скелета капитана";
-    Name[15] = "Череп из цитадели";
-    Name[16] = "Череп пепельного ветра";
-    Name[17] = "Cундук отшельницы";
-    Name[18] = "Сундук морехода";
-    Name[19] = "Сундук мародёра";
-    Name[20] = "Сундук капитана";
-    Name[21] = "Горелый сундук отшельницы";
-    Name[22] = "Горелый сундук морехода";
-    Name[23] = "Горелый сундук мародёра";
-    Name[24] = "Горелый сундук капитана";
-    Name[25] = "Кораловый сундук отшельницы";
-    Name[26] = "Кораловый сундук морехода";
-    Name[27] = "Кораловый сундук мародёра";
-    Name[28] = "Кораловый сундук капитана";
-    Name[29] = "Сундук древних подношений";
-    Name[30] = "Сундук ярости";
-    Name[31] = "Сундук тысячи кружек";
-    Name[32] = "Сундук скорби";
-    Name[33] = "Бронзовые реликвии";
-    Name[34] = "Серебряные реликвии";
-    Name[35] = "Золотые реликвии";
-    Name[36] = "Драгоценные реликвии";
-    Name[37] = "Ревущий кубок";
-    Name[38] = "Серная шкатулка";
-    Name[39] = "Частица преисподней";
-    Name[40] = "Огненный гралль";
-    Name[41] = "Ящик с белым сахором";
-    Name[42] = "Ящик с редким чаем";
-    Name[43] = "Ящик с тонкими щелками";
-    Name[44] = "Ящик с изысканными специями";
-    Name[45] = "Ящик с вулканической породой";
-    Name[46] = "Ящик с мелкой рудой";
-    Name[47] = "Ящик с необычными минералами";
-    Name[48] = "Ящик с драгоценными камнями";
-    Name[49] = "Прах прокялтых";
-    Name[50] = "Урна с древним прахом";
-    Name[51] = "Ящик с роскошными тканями";
-    Name[52] = "Ящик с бутылками рома";
-    Name[53] = "Ящик с растениями";
-    Name[54] = "Ящик с дьявольскими тканями";
-    Name[55] = "Ящик с бутылками дьявольского рома";
-    Name[56] = "Ящик с дьявольскими растениями";
-    Name[57] = "Курица белая";
-    Name[58] = "Курица пятнистая";
-    Name[59] = "Курица чёрная";
-    Name[60] = "Курица золотая";
-    Name[61] = "Змея красно-белая";
-    Name[62] = "Змея сине-чёрная";
-    Name[63] = "Змея чёрная";
-    Name[64] = "Змея золотая";
-    Name[65] = "Свинья розовая";
-    Name[66] = "Свинья пятнистая";
-    Name[67] = "Свинья чёрная";
-    Name[68] = "Свинья золотая";
-    Name[69] = "Кубок из древнего клада";
-    Name[70] = "Позолоченная реликвия из древнего клада";
-    Name[71] = "Череп из древнего клада";
-    Name[72] = "Гнусный череп из древнего клада";
-    Name[73] = "Ящик с легендарными путествиями";
-    Name[74] = "Бочка с древним порохом";
-    Name[75] = "Сундук с легендами";
-    Name[76] = "Горелый сундук с легендами";
-    Name[77] = "Пороховая бочка";
-    Name[78] = "Пороховая бочка из цитадели";
-    Name[79] = "Сапфир русалки";
-    Name[80] = "Сапфир сирены";
-    Name[81] = "Изумруд русалки";
-    Name[82] = "Изумруд сирены";
-    Name[83] = "Рубин русалки";
-    Name[84] = "Рубин сирены";
-    Cen[0] = 100;
-    Cen[1] = 300;
-    Cen[2] = 600;
-    Cen[3] = 1100;
-    Cen[4] = 300;
-    Cen[5] = 550;
-    Cen[6] = 1100;
-    Cen[7] = 2100;
-    Cen[8] = ~200;
-    Cen[9] = 400;
-    Cen[10] = 1000;
-    Cen[11] = ~1400;
-    Cen[12] = 1100;
-    Cen[13] = 2300;
-    Cen[14] = 1500;
-    Cen[15] = 3000;
-    Cen[16] = 10000;
-    Cen[17] = 100;
-    Cen[18] = 200;
-    Cen[19] = 400;
-    Cen[20] = 800;
-    Cen[21] = 200;
-    Cen[22] = 400;
-    Cen[23] = 800;
-    Cen[24] = 1600;
-    Cen[25] = 200;
-    Cen[26] = 400;
-    Cen[27] = 700;
-    Cen[28] = 1500;
-    Cen[29] = 3600;
-    Cen[30] = 3200;
-    Cen[31] = 2400;
-    Cen[32] = 3200;
-    Cen[33] = 100;
-    Cen[34] = 200;
-    Cen[35] = 400;
-    Cen[36] = 800;
-    Cen[37] = 200;
-    Cen[38] = 400;
-    Cen[39] = 800;
-    Cen[40] = 1600;
-    Cen[41] = 150;
-    Cen[42] = 400;
-    Cen[43] = 700;
-    Cen[44] = 1500;
-    Cen[45] = 400;
-    Cen[46] = 700;
-    Cen[47] = 1500;
-    Cen[48] = 2700;
-    Cen[49] = 1300;
-    Cen[50] = 3700;
-    Cen[51] = 300;
-    Cen[52] = 300;
-    Cen[53] = 300;
-    Cen[54] = 600;
-    Cen[55] = 600;
-    Cen[56] = 600;
-    Cen[57] = 55;
-    Cen[58] = 165;
-    Cen[59] = 385;
-    Cen[60] = 825;
-    Cen[61] = 55;
-    Cen[62] = 165;
-    Cen[63] = 365;
-    Cen[64] = 825;
-    Cen[65] = 55;
-    Cen[66] = 165;
-    Cen[67] = 365;
-    Cen[68] = 825;
-    Cen[69] = 600;
-    Cen[70] = 1500;
-    Cen[71] = 600;
-    Cen[72] = 1500;
-    Cen[73] = 600;
-    Cen[74] = 4000;
-    Cen[75] = 5500;
-    Cen[76] = 9000;
-    Cen[77] = 150;
-    Cen[78] = 4400;
-    Cen[79] = 1000;
-    Cen[80] = 1000;
-    Cen[81] = 1500;
-    Cen[82] = 1500;
-    Cen[83] = 2000;
-    Cen[84] = 2000;
+    string[] skulls = new string[20];
+    skulls[0] = "Гнилой трофейный череп";
+    skulls[1] = "Опальный трофейный череп";
+    skulls[2] = "Злобный трофейный череп";
+    skulls[3] = "Гнусный трофейный череп";
+    skulls[4] = "Горелый гнилой трофейный череп";
+    skulls[5] = "Горелый опальный трофейный череп";
+    skulls[6] = "Горелый злобный трофейный череп";
+    skulls[7] = "Горелый гнусный трофейный череп";
+    skulls[8] = "Кораловый гнилой трофейный череп";
+    skulls[9] = "Коралловый опальный трофейный череп";
+    skulls[10] = "Кораловый злобный трофейный череп";
+    skulls[11] = "Кораловый гнусный трофейный череп";
+    skulls[12] = "Череп проклятых";
+    skulls[13] = "Старший череп проклятых";
+    skulls[14] = "Череп скелета капитана";
+    skulls[15] = "Череп из цитадели";
+    skulls[16] = "Череп пепельного ветра";
+    string[] chests_relics = new string[25];
+    chests_relics[0] = "Cундук отшельницы";
+    chests_relics[1] = "Сундук морехода";
+    chests_relics[2] = "Сундук мародёра";
+    chests_relics[3] = "Сундук капитана";
+    chests_relics[4] = "Горелый сундук отшельницы";
+    chests_relics[5] = "Горелый сундук морехода";
+    chests_relics[6] = "Горелый сундук мародёра";
+    chests_relics[7] = "Горелый сундук капитана";
+    chests_relics[8] = "Кораловый сундук отшельницы";
+    chests_relics[9] = "Кораловый сундук морехода";
+    chests_relics[10] = "Кораловый сундук мародёра";
+    chests_relics[11] = "Кораловый сундук капитана";
+    chests_relics[12] = "Сундук древних подношений";
+    chests_relics[13] = "Сундук ярости";
+    chests_relics[14] = "Сундук тысячи кружек";
+    chests_relics[15] = "Сундук скорби";
+    chests_relics[16] = "Бронзовые реликвии";
+    chests_relics[17] = "Серебряные реликвии";
+    chests_relics[18] = "Золотые реликвии";
+    chests_relics[19] = "Драгоценные реликвии";
+    chests_relics[20] = "Ревущий кубок";
+    chests_relics[21] = "Серная шкатулка";
+    chests_relics[22] = "Частица преисподней";
+    chests_relics[23] = "Огненный гралль";
+    string[] boxes = new string[100];
+    boxes[0] = "Ящик с белым сахором";
+    boxes[1] = "Ящик с редким чаем";
+    boxes[2] = "Ящик с тонкими щелками";
+    boxes[3] = "Ящик с изысканными специями";
+    boxes[4] = "Ящик с вулканической породой";
+    boxes[5] = "Ящик с мелкой рудой";
+    boxes[6] = "Ящик с необычными минералами";
+    boxes[7] = "Ящик с драгоценными камнями";
+    boxes[8] = "Прах прокялтых";
+    boxes[9] = "Урна с древним прахом";
 
-    string[] Name_en = new string[100];
-    Name_en[0] = "Rotten Trophy Skull";
-    Name_en[1] = "Disgraced Trophy Skull";
-    Name_en[2] = "Evil Trophy Skull";
-    Name_en[3] = "Vile Trophy Skull";
-    Name_en[4] = "Burnt Rotten Trophy Skull";
-    Name_en[5] = "Burnt Disgraced Trophy Skull";
-    Name_en[6] = "Burnt Evil Trophy Skull";
-    Name_en[7] = "Burnt Vile Trophy Skull";
-    Name_en[8] = "Coral Rotten Trophy Skull";
-    Name_en[9] = "Coral Disgraced Trophy Skull";
-    Name_en[10] = "Coral Evil Trophy Skull";
-    Name_en[11] = "Coral Vile Trophy Skull";
-    Name_en[12] = "Skull of the Damned";
-    Name_en[13] = "Senior Skull of the Damned";
-    Name_en[14] = "Captain's Skeleton skull";
-    Name_en[15] = "Skull from the Citadel";
-    Name_en[16] = "Skull of the ashen wind";
-    Name_en[17] = "Hermit's Chest";
-    Name_en[18] = "Sailor's Chest";
-    Name_en[19] = "Marauder's Chest";
-    Name_en[20] = "Captain's Chest";
-    Name_en[21] = "Burnt Hermit's Chest";
-    Name_en[22] = "Burnt Sailor's chest";
-    Name_en[23] = "The Marauder's Burnt Chest";
-    Name_en[24] = "Captain's Burnt Chest";
-    Name_en[25] = "Hermit's Coral Chest";
-    Name_en[26] = "Sailor's Coral Chest";
-    Name_en[27] = "Marauder's Coral Chest";
-    Name_en[28] = "Captain's Coral Chest";
-    Name_en[29] = "Chest of Ancient Offerings";
-    Name_en[30] = "Chest of Rage";
-    Name_en[31] = "Chest of a thousand mugs";
-    Name_en[32] = "Chest of Sorrow";
-    Name_en[33] = "Bronze Relics";
-    Name_en[34] = "Silver Relics";
-    Name_en[35] = "Golden Relics";
-    Name_en[36] = "Precious Relics";
-    Name_en[37] = "Roaring Cup";
-    Name_en[38] = "Sulfur box";
-    Name_en[39] = "Particle of the underworld";
-    Name_en[40] = "Fire Grall";
-    Name_en[41] = "Box with white sugar";
-    Name_en[42] = "Box of rare tea";
-    Name_en[43] = "Box with thin slits";
-    Name_en[44] = "Box with exquisite spices";
-    Name_en[45] = "Volcanic rock crate";
-    Name_en[46] = "Small ore box";
-    Name_en[47] = "Box with unusual minerals";
-    Name_en[48] = "Jewel Box";
-    Name_en[49] = "The ashes of the damned";
-    Name_en[50] = "Urn with ancient ashes";
-    Name_en[51] = "Box with luxury fabrics";
-    Name_en[52] = "A box with bottles of rum";
-    Name_en[53] = "Box with plants";
-    Name_en[54] = "The box with the devil's fabrics";
-    Name_en[55] = "A box with bottles of devil rum";
-    Name_en[56] = "Box with devil plants";
-    Name_en[57] = "White chicken";
-    Name_en[58] = "Spotted chicken";
-    Name_en[59] = "Black chicken";
-    Name_en[60] = "Golden chicken";
-    Name_en[61] = "Red and white snake";
-    Name_en[62] = "Blue-black snake";
-    Name_en[63] = "Black snake";
-    Name_en[64] = "Golden snake";
-    Name_en[65] = "Pink pig";
-    Name_en[66] = "Spotted pig";
-    Name_en[67] = "Black pig";
-    Name_en[68] = "Golden pig";
-    Name_en[69] = "Cup from an ancient treasure";
-    Name_en[70] = "Gilded relic from an ancient treasure";
-    Name_en[71] = "Skull from an ancient treasure";
-    Name_en[72] = "A vile skull from an ancient treasure";
-    Name_en[73] = "Box with legendary journeys";
-    Name_en[74] = "A barrel of ancient gunpowder";
-    Name_en[75] = "Legend Chest";
-    Name_en[76] = "Burnt chest with legends";
-    Name_en[77] = "Powder keg";
-    Name_en[78] = "Powder keg from the citadel";
-    Name_en[79] = "Mermaid Sapphire";
-    Name_en[80] = "Sapphire of the siren";
-    Name_en[81] = "Mermaid Emerald";
-    Name_en[83] = "Ruby of the mermaid";
-    Name_en[84] = "Ruby of the siren";
-    if (language == "Ru")
+
+    string[] cargo_box = new string[10];
+    cargo_box[0] = "Ящик с роскошными тканями";
+    cargo_box[1] = "Ящик с бутылками рома";
+    cargo_box[2] = "Ящик с растениями";
+    cargo_box[3] = "Ящик с дьявольскими тканями";
+    cargo_box[4] = "Ящик с бутылками дьявольского рома";
+    cargo_box[5] = "Ящик с дьявольскими растениями";
+
+
+    string[] animals = new string[15];
+    animals[0] = "Курица белая";
+    animals[1] = "Курица пятнистая";
+    animals[2] = "Курица чёрная";
+    animals[3] = "Курица золотая";
+    animals[4] = "Змея красно-белая";
+    animals[5] = "Змея сине-чёрная";
+    animals[6] = "Змея чёрная";
+    animals[7] = "Змея золотая";
+    animals[8] = "Свинья розовая";
+    animals[9] = "Свинья пятнистая";
+    animals[10] = "Свинья чёрная";
+    animals[11] = "Свинья золотая";
+    string[] animals_cen = new string[15];
+    animals_cen[0] = "Обычная:10/По заданию:100";
+    animals_cen[1] = "Обычная:30/По заданию:300";
+    animals_cen[2] = "Обычная:70/По заданию:700";
+    animals_cen[3] = "Обычная:150/По заданию:1500";
+    animals_cen[4] = "Обычная:10/По заданию:100";
+    animals_cen[5] = "Обычная:30/По заданию:300";
+    animals_cen[6] = "Обычная:70/По заданию:700";
+    animals_cen[7] = "Обычная:150/По заданию:1500";
+    animals_cen[8] = "Обычная:10/По заданию:100";
+    animals_cen[9] = "Обычная:30/По заданию:300";
+    animals_cen[10] = "Обычная:70/По заданию:700";
+    animals_cen[11] = "Обычная:150/По заданию:1500";
+    string[] treasure_of_athena = new string[10];
+    treasure_of_athena[0] = "Кубок из древнего клада";
+    treasure_of_athena[1] = "Позолоченная реликвия из древнего клада";
+    treasure_of_athena[2] = "Череп из древнего клада";
+    treasure_of_athena[3] = "Гнусный череп из древнего клада";
+    treasure_of_athena[4] = "Ящик с легендарными путествиями";
+    treasure_of_athena[5] = "Бочка с древним порохом";
+    treasure_of_athena[6] = "Сундук с легендами";
+    treasure_of_athena[7] = "Горелый сундук с легендами";
+    string[] barrels = new string[10];
+    barrels[0] = "Пороховая бочка";
+    barrels[1] = "Пороховая бочка из цитадели";
+    string[] gem = new string[11];
+    gem[0] = "Сапфир русалки";
+    gem[1] = "Сапфир сирены";
+    gem[2] = "Изумруд русалки";
+    gem[3] = "Изумруд сирены";
+    gem[4] = "Рубин русалки";
+    gem[5] = "Рубин сирены";
+    int[] skulls_cen = new int[20];
+    skulls_cen[0] = 100;
+    skulls_cen[1] = 300;
+    skulls_cen[2] = 600;
+    skulls_cen[3] = 1100;
+    skulls_cen[4] = 300;
+    skulls_cen[5] = 550;
+    skulls_cen[6] = 1100;
+    skulls_cen[7] = 2100;
+    skulls_cen[8] = 201;
+    skulls_cen[9] = 400;
+    skulls_cen[10] = 1000;
+    skulls_cen[11] = 1401;
+    skulls_cen[12] = 1100;
+    skulls_cen[13] = 2300;
+    skulls_cen[14] = 1500;
+    skulls_cen[15] = 3000;
+    skulls_cen[16] = 7000;
+    int[] chests_relics_cen = new int[30];
+    chests_relics_cen[0] = 100;
+    chests_relics_cen[1] = 200;
+    chests_relics_cen[2] = 400;
+    chests_relics_cen[3] = 800;
+    chests_relics_cen[4] = 200;
+    chests_relics_cen[5] = 400;
+    chests_relics_cen[6] = 800;
+    chests_relics_cen[7] = 1600;
+    chests_relics_cen[8] = 200;
+    chests_relics_cen[9] = 400;
+    chests_relics_cen[10] = 700;
+    chests_relics_cen[11] = 1500;
+    chests_relics_cen[12] = 3600;
+    chests_relics_cen[13] = 3200;
+    chests_relics_cen[14] = 2400;
+    chests_relics_cen[15] = 3200;
+    chests_relics_cen[16] = 100;
+    chests_relics_cen[17] = 200;
+    chests_relics_cen[18] = 400;
+    chests_relics_cen[19] = 800;
+    chests_relics_cen[20] = 200;
+    chests_relics_cen[21] = 400;
+    chests_relics_cen[22] = 800;
+    chests_relics_cen[23] = 1600;
+    int[] boxes_cen = new int[15];
+    boxes_cen[0] = 150;
+    boxes_cen[1] = 400;
+    boxes_cen[2] = 700;
+    boxes_cen[3] = 1500;
+    boxes_cen[4] = 400;
+    boxes_cen[5] = 700;
+    boxes_cen[6] = 1500;
+    boxes_cen[7] = 2700;
+    boxes_cen[8] = 1300;
+    boxes_cen[9] = 3700;
+    int[] treasure_of_athena_cen = new int[10];
+    treasure_of_athena_cen[0] = 600;
+    treasure_of_athena_cen[1] = 1500;
+    treasure_of_athena_cen[2] = 600;
+    treasure_of_athena_cen[3] = 1500;
+    treasure_of_athena_cen[4] = 600;
+    treasure_of_athena_cen[5] = 4000;
+    treasure_of_athena_cen[6] = 5500;
+    treasure_of_athena_cen[7] = 9000;
+    int[] barrels_cen = new int[10];
+    barrels_cen[0] = 150;
+    barrels_cen[1] = 4400;
+    int[] gem_cen = new int[10];
+    gem_cen[0] = 1000;
+    gem_cen[1] = 1000;
+    gem_cen[2] = 1500;
+    gem_cen[3] = 1500;
+    gem_cen[4] = 2000;
+    gem_cen[5] = 2000;
+    string[] cargo_box_cen = new string[10];
+    cargo_box_cen[0] = "700 / 500(Влажные) / 300(Промокшие) / 100(Вымокшие)";
+    cargo_box_cen[1] = "700/500(Треснувшие)/300(Расколотые)/100(Разбитые)";
+    cargo_box_cen[2] = "700/500(Увядающие)/300(Завядшие)/100(Высохшие)";
+    cargo_box_cen[3] = "1400/1000(Влажные)/600(Промокшие)/200(Вымокшие)";
+    cargo_box_cen[4] = "1400/1000(Треснувшие)/600(Расколотые)/200(Разбитые)";
+    cargo_box_cen[5] = "1400/1000(Увядающие)/600(Завядшие)/200(Высохшие)";
+    Console.WriteLine("Введите сокровище для поиска: ");
+    string? poisk = Console.ReadLine();
+    Console.Clear();
+    for (int i = 0; i < skulls.Length; i++)
     {
-        Console.WriteLine("Введите сокровище для поиска: ");
-        string poisk = Console.ReadLine();
-        for (int i = 0; i < Name.Length; i++)
+        if (skulls[i] == poisk)
         {
-            if (Name[i] == poisk)
-            {
-                Console.WriteLine($"Средняя цена:{Cen[i]}");
-            }
-        }
-
-        Console.WriteLine("Хотите Продолжить?(Да или Нет)");
-        string pr = Console.ReadLine();
-        if (pr == "Да")
-        {
-            Console.Clear();
-        }
-        else if (pr == "Нет")
-        {
+            Console.WriteLine($"{skulls[i]} средняя цена: {skulls_cen[i]}");
             break;
         }
-        else Console.Clear();
     }
-    else if (language == "En")
+    for (int i = 0; i < chests_relics.Length; i++)
     {
-        Console.WriteLine("Enter the treasure to search for: ");
-        string poisk = Console.ReadLine();
-        for (int i = 0; i < Name_en.Length; i++)
+        if (chests_relics[i] == poisk)
         {
-            if (Name_en[i] == poisk)
-            {
-                Console.WriteLine($"Average price:{Cen[i]}");
-            }
-        }
-
-        Console.WriteLine("Do You Want To Continue?(Yes or No)");
-        string pr = Console.ReadLine();
-        if (pr == "Yes")
-        {
-            Console.Clear();
-        }
-        else if (pr == "No")
-        {
+            Console.WriteLine($"{chests_relics[i]} средняя цена: {chests_relics_cen[i]}");
             break;
         }
-        else Console.Clear();
     }
+    for (int i = 0; i < boxes.Length; i++)
+    {
+        if (boxes[i] == poisk)
+        {
+            Console.WriteLine($"{boxes[i]} средняя цена: {boxes_cen[i]}");
+            break;
+        }
+    }
+    for (int i = 0; i < cargo_box.Length; i++)
+    {
+        if (cargo_box[i] == poisk)
+        {
+            Console.WriteLine($"{cargo_box[i]} цена: {cargo_box_cen[i]}");
+            break;
+        }
+    }
+    for (int i = 0; i < animals.Length; i++)
+    {
+        if (animals[i] == poisk)
+        {
+            Console.WriteLine($"{animals[i]}  цена: {animals_cen[i]}");
+            break;
+        }
+    }
+    for (int i = 0; i < treasure_of_athena.Length; i++)
+    {
+        if (treasure_of_athena[i] == poisk)
+        {
+            Console.WriteLine($"{treasure_of_athena[i]} средняя цена: {treasure_of_athena_cen[i]}");
+            break;
+        }
+    }
+    for (var i = 0; i < barrels.Length; i++)
+    {
+        if (barrels[i] == poisk)
+        {
+            Console.WriteLine($"{barrels[i]} средняя цена: {barrels_cen[i]}");
+            break;
+        }
+    }
+    for (int i = 0; i < gem.Length; i++)
+    {
+        if (gem[i] == poisk)
+        {
+            Console.WriteLine($"{gem[i]} средняя цена: {gem_cen[i]}");
+            break;
+        }
+    }
+
+    Console.WriteLine("Хотите повторить?(Да или Нет или нажмите Enter)");
+    string? otvet = Console.ReadLine();
+    if (otvet == "Да")
+    {
+        Console.Clear();
+    }
+    else if (otvet == "Нет")
+    {
+        break;
+    }
+    else Console.Clear();
 }
+
