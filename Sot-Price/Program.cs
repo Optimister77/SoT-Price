@@ -1,4 +1,5 @@
-﻿Console.WriteLine("Приветствую! Это прогрмма сделана для просмотра средних цен в игре SoT.");
+﻿//автор damernm
+Console.WriteLine("Приветствую! Это прогрмма сделана для просмотра средних цен в игре SoT.");
 while (true)
 {
     string[] skulls = new string[20];
