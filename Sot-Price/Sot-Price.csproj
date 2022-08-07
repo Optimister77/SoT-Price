@@ -6,6 +6,11 @@
     <RootNamespace>Sot_Price</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyVersion>1.5</AssemblyVersion>
+    <FileVersion>1.5</FileVersion>
+    <PackageLicenseFile>C:\Users\damer\Desktop\Проекты\Sot-Price\LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Version>1.5</Version>
   </PropertyGroup>
 
 </Project>
