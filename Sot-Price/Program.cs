@@ -272,4 +272,3 @@ while (true)
     }
     else Console.Clear();
 }
-
