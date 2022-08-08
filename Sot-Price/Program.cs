@@ -267,7 +267,7 @@ while (true)
     {
         if (db[i] == poisk)
         {
-            Console.WriteLine($"{db[i]} цена: {db_cen[i]}");
+            Console.WriteLine($"{db[i]} цена: {db_cen[i]} дублонов");
             break;
         }
     }
