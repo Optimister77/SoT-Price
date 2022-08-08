@@ -192,6 +192,10 @@ while (true)
     cargo_box_cen[3] = "1400/1000(Влажные)/600(Промокшие)/200(Вымокшие)";
     cargo_box_cen[4] = "1400/1000(Треснувшие)/600(Расколотые)/200(Разбитые)";
     cargo_box_cen[5] = "1400/1000(Увядающие)/600(Завядшие)/200(Высохшие)";
+    string[] db = new string[10];
+    db[0] = "Ритуальный череп";
+    int[] db_cen  = new int[10];
+    db_cen[0] = 10;
     Console.WriteLine("Введите сокровище для поиска: ");
     string? poisk = Console.ReadLine();
     Console.Clear();
@@ -259,7 +263,14 @@ while (true)
             break;
         }
     }
-
+    for (int i = 0; j < db.Length; i++)
+    {
+        if (db[i] == poisk)
+        {
+            Console.WriteLine($"{db[i]} цена: {db_cen[i]}");
+            break;
+        }
+    }
     Console.WriteLine("Хотите повторить?(Да или Нет или нажмите Enter)");
     string? otvet = Console.ReadLine();
     if (otvet == "Да")
