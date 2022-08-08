@@ -263,7 +263,7 @@ while (true)
             break;
         }
     }
-    for (int i = 0; j < db.Length; i++)
+    for (int i = 0; i < db.Length; i++)
     {
         if (db[i] == poisk)
         {
